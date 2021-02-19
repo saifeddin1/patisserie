@@ -5,21 +5,15 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
     return (
         <div>
-        <Navbar bg="light" variant="light">
-        <Link to="/">Patisserie</Link>
-        <Nav className="mr-auto">
-        <Nav.Link>
-        <Link  to="/dashboard" >Dashboard</Link>
-        </Nav.Link>
-        <Nav.Link href="#features">About</Nav.Link>
-          <Nav.Link href="#pricing">Contact</Nav.Link>
-        </Nav>
-        <Link to="/add">
-        <Button variant="success" style={{marginLeft: 'auto', marginRight: '1rem'}}>
-        Add Product
-        </Button>
-        </Link>
-      </Navbar>
+          <Navbar bg="light" variant="light">
+            <Link to="/" className="navbar-brand">Patisserie</Link>
+            <Nav className="mr-auto">
+                <Link className="nav-link" to="/dashboard" >Dashboard</Link>
+              <Nav.Link>About</Nav.Link>
+              <Nav.Link>Contact</Nav.Link>
+            </Nav>
+          
+          </Navbar>
         </div>
     )
 }

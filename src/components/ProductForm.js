@@ -7,21 +7,22 @@ const ProductForm = () => {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(0)
+    const [category, setCategory] = useState('')
     return (
         <div>
         <Form>
             <Form.Group>
                 <Form.Label>Name</Form.Label>
-                <Form.Control onChange={() =>setName(this.value)} placeholder="cake" />
+                <Form.Control onChange={(e) =>setName(e.target.value)} placeholder="cake" />
             </Form.Group>
             <Form.Group>
                 <Form.Label>Description</Form.Label>
-                <Form.Control onChange={()=>setDescription(this.value)} placeholder="yummyy. .." />
+                <Form.Control onChange={(e)=>setDescription(e.target.value)} placeholder="yummyy. .." />
             </Form.Group>
             <Form.Row>
                 <Form.Group as={Col}>
                 <Form.Label>Category</Form.Label>
-                <Form.Control as="select" defaultValue="Choose...">
+                <Form.Control as="select" defaultValue="Choose..." onChange={(e)=> setCategory(e.target.value)}>
                     <option>Choose...</option>
                     <option>Cakes</option>
                     <option>Pizza</option>
@@ -31,10 +32,10 @@ const ProductForm = () => {
 
                 <Form.Group as={Col}>
                 <Form.Label>Price</Form.Label>
-                <Form.Control onChange={()=> setPrice(this.value)} />
+                <Form.Control type="number" onChange={(e)=> setPrice(e.target.value)} />
                 </Form.Group>
             </Form.Row>
-            <Button variant="primary" onClick={(e) => {console.log(e.targer.value)}}>
+            <Button variant="primary">
                 Add
             </Button>
             </Form>

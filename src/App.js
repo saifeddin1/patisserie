@@ -5,7 +5,11 @@ import Footer from './components/Footer'
 import ProductForm from './components/ProductForm'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from './components/Dashboard'
+import {useState} from 'react'
+
 function App() {
+  const [showAddProduct, setShowAddProduct] = useState(false)
+  
   return (
     <Router>
     <div className="container">
@@ -14,16 +18,17 @@ function App() {
     <Products /> 
     </Route>
     <Route exact path="/dashboard">
-    <Dashboard /> 
+    <Dashboard onButtonClick={()=>
+      setShowAddProduct(!showAddProduct)}
+      showAdd={showAddProduct}/> 
     </Route>
         <Footer />
-        <Route exact path="/add">
-        <ProductForm />  
-        </Route>
-        
         </div>
     </Router>
-  );
+    );
 }
 
 export default App;
+
+// <Route exact path="/add">
+// </Route>
