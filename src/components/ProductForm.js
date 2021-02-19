@@ -9,7 +9,7 @@ const ProductForm = () => {
     const [price, setPrice] = useState(0)
     const [category, setCategory] = useState('')
     return (
-        <div>
+        <div className="w-50">
         <Form>
             <Form.Group>
                 <Form.Label>Name</Form.Label>

@@ -5,7 +5,7 @@ import ProductForm from './ProductForm'
 const Dashboard = ({onButtonClick, showAdd}) => {
     return (
         <div>
-        <Button variant="success" style={{marginLeft: 'auto', marginRight: '1rem'}} onClick={onButtonClick}>
+        <Button variant="success" style={{marginLeft: 'auto', marginRight: '1rem'}} id="btn" onClick={onButtonClick}>
         {showAdd? "X Close": "Add Product"}
         </Button>
         {showAdd && <ProductForm /> } 
