@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Nav, Button} from 'react-bootstrap'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     return (
@@ -8,7 +8,9 @@ const Navigation = () => {
         <Navbar bg="light" variant="light">
         <Link to="/">Patisserie</Link>
         <Nav className="mr-auto">
-        <Link   to="/dashboard">Dashboard</Link>
+        <Nav.Link>
+        <Link  to="/dashboard" >Dashboard</Link>
+        </Nav.Link>
         <Nav.Link href="#features">About</Nav.Link>
           <Nav.Link href="#pricing">Contact</Nav.Link>
         </Nav>
