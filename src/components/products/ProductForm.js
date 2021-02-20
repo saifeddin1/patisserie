@@ -8,6 +8,11 @@ const ProductForm = () => {
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(0)
     const [category, setCategory] = useState('')
+
+    // const onSubmit = (e) => {
+    //     e.preventDefault()
+    //     console.log(`added,${name}, ${description}, ${price}, ${category}`);
+    // }
     return (
         <div className="w-50">
         <Form>
